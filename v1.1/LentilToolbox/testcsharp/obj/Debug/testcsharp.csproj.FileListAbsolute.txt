@@ -1,0 +1,15 @@
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\bin\Debug\testcsharp.exe.config
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\bin\Debug\testcsharp.exe
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\bin\Debug\testcsharp.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\Interop.INFITF.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\Interop.KnowledgewareTypeLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\Interop.MECMOD.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\Interop.ProductStructureTypeLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\testcsharp.csproj.ResolveComReference.cache
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\testcsharp.Form1.resources
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\testcsharp.Properties.Resources.resources
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\testcsharp.csproj.GenerateResource.Cache
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\testcsharp.exe
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\testcsharp.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\testcsharp.csprojResolveAssemblyReference.cache
+G:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\testcsharp\obj\Debug\testcsharp.ShowAllPage.resources

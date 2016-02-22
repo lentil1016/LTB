@@ -1,0 +1,15 @@
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\bin\Release\LentilToolbox.exe.config
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\bin\Release\LentilToolbox.exe
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\bin\Release\LentilToolbox.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\bin\Release\Core.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\bin\Release\ModelLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\bin\Release\Core.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\bin\Release\ModelLib.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\bin\Release\ModelLib.xml
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.ftrwin.resources
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.Properties.Resources.resources
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.Shaftwin.resources
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.csproj.GenerateResource.Cache
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.exe
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.pdb

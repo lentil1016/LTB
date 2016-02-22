@@ -1,0 +1,13 @@
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Release\Core.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Release\Core.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Release\ModelLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Release\ModelLib.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Release\ModelLib.xml
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Interop.INFITF.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Interop.KnowledgewareTypeLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Interop.MECMOD.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Interop.ProductStructureTypeLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Core.csproj.ResolveComReference.cache
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Core.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Core.pdb

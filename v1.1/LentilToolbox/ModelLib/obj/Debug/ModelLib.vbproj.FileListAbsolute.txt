@@ -1,0 +1,16 @@
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\bin\Debug\ModelLib.dll
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\bin\Debug\ModelLib.pdb
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\bin\Debug\ModelLib.xml
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\ModelLib.vbprojResolveAssemblyReference.cache
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\Interop.HybridShapeTypeLib.dll
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\Interop.INFITF.dll
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\Interop.KnowledgewareTypeLib.dll
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\Interop.MECMOD.dll
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\Interop.PARTITF.dll
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\Interop.ProductStructureTypeLib.dll
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\ModelLib.vbproj.ResolveComReference.cache
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\ModelLib.Resources.resources
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\ModelLib.vbproj.GenerateResource.Cache
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\ModelLib.dll
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\ModelLib.xml
+g:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\ModelLib\obj\Debug\ModelLib.pdb

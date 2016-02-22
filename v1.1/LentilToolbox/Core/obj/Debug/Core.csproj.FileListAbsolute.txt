@@ -1,0 +1,13 @@
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Debug\Interop.INFITF.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Debug\Interop.KnowledgewareTypeLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Debug\Interop.MECMOD.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Debug\Interop.ProductStructureTypeLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Debug\Core.csproj.ResolveComReference.cache
+G:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Debug\Core.dll
+G:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Debug\Core.pdb
+G:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Debug\Core.dll
+G:\Documents\Visual Studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Debug\Core.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Debug\ModelLib.dll
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Debug\ModelLib.pdb
+g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\bin\Debug\ModelLib.xml

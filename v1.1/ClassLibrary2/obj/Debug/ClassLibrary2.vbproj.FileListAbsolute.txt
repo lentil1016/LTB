@@ -1,0 +1,9 @@
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\bin\Debug\ClassLibrary2.xml
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\obj\Debug\ClassLibrary2.vbprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\obj\Debug\ClassLibrary2.Resources.resources
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\obj\Debug\ClassLibrary2.vbproj.GenerateResource.Cache
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\obj\Debug\ClassLibrary2.xml
+g:\documents\visual studio 2015\Projects\v1.1\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
