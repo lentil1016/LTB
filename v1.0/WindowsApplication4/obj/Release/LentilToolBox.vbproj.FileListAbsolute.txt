@@ -1,0 +1,14 @@
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\bin\Release\LentilToolbox.exe.config
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\bin\Release\LentilToolbox.exe
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\bin\Release\LentilToolbox.pdb
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\bin\Release\LentilToolbox.xml
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\bin\Release\Cyl_gear.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\bin\Release\Cyl_gear.pdb
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\bin\Release\Cyl_gear.xml
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolBox.vbprojResolveAssemblyReference.cache
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolbox.Form1.resources
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolbox.Resources.resources
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolBox.vbproj.GenerateResource.Cache
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolbox.exe
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolbox.xml
+G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolbox.pdb

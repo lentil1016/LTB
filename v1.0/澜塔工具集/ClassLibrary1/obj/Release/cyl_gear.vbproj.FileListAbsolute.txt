@@ -1,0 +1,15 @@
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\bin\Release\Cyl_gear.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\bin\Release\Cyl_gear.pdb
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\bin\Release\Cyl_gear.xml
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Interop.HybridShapeTypeLib.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Interop.INFITF.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Interop.KnowledgewareTypeLib.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Interop.MECMOD.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Interop.PARTITF.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Interop.ProductStructureTypeLib.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\cyl_gear.vbproj.ResolveComReference.cache
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Cyl_gear.Resources.resources
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\cyl_gear.vbproj.GenerateResource.Cache
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Cyl_gear.dll
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Cyl_gear.xml
+G:\Documents\Visual Studio 2015\Projects\工具集\澜塔工具集\ClassLibrary1\obj\Release\Cyl_gear.pdb
