@@ -13,3 +13,6 @@ g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilTo
 g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.csproj.GenerateResource.Cache
 g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.exe
 g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\obj\Release\LentilToolbox.pdb
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\bin\Release\LentilToolbox.exe.config
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.exe
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.pdb
