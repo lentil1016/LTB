@@ -6,7 +6,7 @@ A CATIA plug-in that can generate complex shaft parts within CATIA via COM inter
 Project environment: VS Community 2015.
 Language: VB & C#
 ###instruction
-Plz Refer to [this]()
+Plz Refer to [this](https://github.com/Lentil1016/LTB/blob/1e3c752dee7b3a0245ccc685096374c15bb9e8df/LICENSE)
 ###Current issues
 Can sometimes make the CATIA instance crash.
 Can sometimes fail to model at the first time a CATIA instance luanched.
