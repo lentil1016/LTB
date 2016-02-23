@@ -12,3 +12,7 @@ G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Relea
 G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolbox.exe
 G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolbox.xml
 G:\Documents\Visual Studio 2015\Projects\工具集\WindowsApplication4\obj\Release\LentilToolbox.pdb
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.0\WindowsApplication4\bin\Release\LentilToolbox.exe.config
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.0\WindowsApplication4\obj\Release\LentilToolbox.exe
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.0\WindowsApplication4\obj\Release\LentilToolbox.xml
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.0\WindowsApplication4\obj\Release\LentilToolbox.pdb

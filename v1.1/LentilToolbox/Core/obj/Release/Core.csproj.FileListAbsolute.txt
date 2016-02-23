@@ -11,3 +11,16 @@ g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Int
 g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Core.csproj.ResolveComReference.cache
 g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Core.dll
 g:\documents\visual studio 2015\Projects\v1.1\LentilToolbox\Core\obj\Release\Core.pdb
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\bin\Release\Core.dll
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\bin\Release\Core.pdb
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\bin\Release\ModelLib.dll
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\bin\Release\ModelLib.pdb
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\bin\Release\ModelLib.xml
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\obj\Release\Interop.INFITF.dll
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\obj\Release\Interop.KnowledgewareTypeLib.dll
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\obj\Release\Interop.MECMOD.dll
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\obj\Release\Interop.ProductStructureTypeLib.dll
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\obj\Release\Core.csproj.ResolveComReference.cache
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\obj\Release\Core.dll
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\Core\obj\Release\Core.pdb

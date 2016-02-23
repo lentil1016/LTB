@@ -72,6 +72,7 @@ namespace LentilToolbox
                     breadth.Text = "轴段宽度";
                     GearDir.Visible = false;
                     values.Height = 75;
+                    GearType.Text = "(请选择齿轮类型)";
                 }
                 else
                 {
@@ -98,6 +99,8 @@ namespace LentilToolbox
                     }
                     else
                     {
+
+                        GearType.Text = "(请选择齿轮类型)";
                         GearFace.Visible = true;
                         GearType.Visible = false;
                         GearFace.Top = 22;
@@ -112,6 +115,7 @@ namespace LentilToolbox
             }
             else
             {
+                GearType.Text = "(请选择齿轮类型)";
                 values.Visible = false;
                 GearDir.Visible = false;
                 GearFace.Visible = false;
@@ -135,6 +139,7 @@ namespace LentilToolbox
                     Beta.Visible = false;
                     GtextBox5.Visible = false;
                     values.Height = 125;
+                    GearDir.Visible = false ;
                 }
                 values.Visible = true;
 
