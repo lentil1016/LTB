@@ -24,7 +24,7 @@ G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\bin\Release\Core
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\bin\Release\ModelLib.pdb
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\bin\Release\ModelLib.xml
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.csprojResolveAssemblyReference.cache
-G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.ftrwin.resources
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.Properties.Resources.resources
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.Shaftwin.resources
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.csproj.GenerateResource.Cache
+G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.ftrwin.resources

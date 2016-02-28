@@ -14,13 +14,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 using System;
 using System.Windows.Forms;
 using Core;
+using System.Text.RegularExpressions;
 
 namespace LentilToolbox
 {
     public partial class ftrwin : Form//轴段特征子窗体
     {
         private int rank;
-        private Shaftwin oShaftwin;
+        public Shaftwin oShaftwin;
         private int B_flat=0;
         private double dBeta;
         public ftrwin(Shaftwin oshaftwin)
@@ -82,8 +83,8 @@ namespace LentilToolbox
                         GearFace.Visible = true;
                         GearType.Visible = false;
                         GearFace.Top = 22;
-                        Sha_B.Visible = true;
-                        Sha_d.Visible = true;
+                        轴段宽度.Visible = true;
+                        轴段直径.Visible = true;
                         GearDir.Visible = false;
                     }
                 }
@@ -107,13 +108,13 @@ namespace LentilToolbox
                 if (GearType.Text == "斜齿轮")
                 {
                     GearDir.Visible = true;
-                    Cyl_Beta.Visible = true;
+                    圆柱齿轮螺旋角.Visible = true;
                     L_Beta .Visible = true;
                     Values_Cyl .Height = 150;
                 }
                 else
                 {
-                    Cyl_Beta.Visible = false;
+                    圆柱齿轮螺旋角.Visible = false;
                     L_Beta.Visible = false;
                     Values_Cyl.Height = 125;
                     GearDir.Visible = false ;
@@ -134,26 +135,26 @@ namespace LentilToolbox
             {
                 if(ShaftType.Text == "普通轴段")//普通轴段
                 {
-                    B = Convert.ToDouble(Sha_B.Text);
+                    B = 轴段宽度.consult();
                     shaft_section oshaft_section = new shaft_section();
-                    oshaft_section.SetValues(B, Convert.ToDouble(Sha_d.Text));
+                    oshaft_section.SetValues(B, 轴段直径.consult());
                     oshaft_section.modeling(Height, oiPartDoc);
                 }
                 else if (ShaftType.Text== "圆柱直/斜齿轮")//圆柱齿轮
                 {
                     if (GearType.Text == "斜齿轮")
-                        dBeta = Convert.ToDouble(Cyl_Beta.Text);
+                        dBeta = 圆柱齿轮螺旋角.consult();
                     else
                         dBeta = 0;
-                    B = Convert.ToDouble(Cyl_B.Text);
+                    B = 圆柱齿轮齿宽.consult();
                     cyl_gear ocyl_gear = new cyl_gear();
-                    ocyl_gear.SetValues(B, Convert.ToInt32(Cyl_z .Text),Convert.ToInt32(Cyl_m.Text),Convert.ToDouble(Cyl_Alpha.Text),dBeta, B_flat);
+                    ocyl_gear.SetValues(B, 圆柱齿轮齿数 .consult(), 圆柱齿轮模数.consult(), 圆柱齿轮压力角.consult(), dBeta, B_flat);
                     ocyl_gear.modeling(Height, oiPartDoc);
                 }
                 else//圆锥齿轮
                 {
                     bool Dir;
-                    B = Convert.ToDouble(Bev_A.Text)-Convert.ToDouble(Bev_C.Text);
+                    B = 齿胚厚.consult() - 齿槽深.consult();
                     bev_gear obev_gear = new bev_gear();
                     if (GearFace.Text == "(请选择锥面朝向)")
                     {
@@ -164,7 +165,7 @@ namespace LentilToolbox
                         Dir = true ;
                     else
                         Dir = false ;
-                    obev_gear.SetValues(Convert.ToDouble(Bev_A.Text), Convert.ToDouble(Bev_B.Text), Convert.ToDouble(Bev_C.Text), Convert.ToInt32(Bev_z.Text), Convert.ToInt32(Bev_m.Text), Convert.ToDouble(Bev_Alpha.Text), Convert.ToDouble(Bev_Theta.Text),Dir);
+                    obev_gear.SetValues(齿胚厚.consult(), 锥齿轮齿宽.consult(), 齿槽深.consult(), 锥齿轮齿数.consult(), 大端模数.consult(), 锥齿轮压力角.consult(),分锥角.consult(), Dir);
                     obev_gear.modeling(Height, oiPartDoc);
                 }
             }
@@ -187,6 +188,56 @@ namespace LentilToolbox
 
         private void GearFace_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void tSha_B_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+    }
+    public class TextBoxPlus:TextBox
+    {
+        public TextBoxPlus ()
+        {
+            this.Leave += new System.EventHandler(fTextChanged);
+        }
+        public void fTextChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+        virtual protected void Check()
+        {
+        }
+    }
+    public class TextBoxInt:TextBoxPlus
+    {
+        private int value;
+        override protected void Check()
+        {
+            if (Regex.IsMatch(Text, @"^\d+$"))
+                value = Convert.ToInt32(Text);
+            else
+                MessageBox.Show(Name + "一般是正整数值，请填写一个正整数");
+        }
+        public int consult()
+        {
+            return value;
+        }
+    }
+    public class TextBoxDouble : TextBoxPlus
+    {
+        private double value=0;
+        override protected void Check()
+        {
+            if (Regex.IsMatch(Text, @"^\d+(\.\d+)?$"))
+                value = Convert.ToDouble(Text);
+            else
+                MessageBox.Show(Name + "一般是正实数值，请填写一个正实数");
+        }
+        public double consult()
+        {
+            return value;
         }
     }
 }

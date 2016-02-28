@@ -34,41 +34,41 @@
             this.GearDir = new System.Windows.Forms.ComboBox();
             this.GearType = new System.Windows.Forms.ComboBox();
             this.ShaftType = new System.Windows.Forms.ComboBox();
-            this.Delete = new System.Windows.Forms.Button();
+            this.Values_Sha = new System.Windows.Forms.GroupBox();
+            this.轴段宽度 = new LentilToolbox.TextBoxDouble();
+            this.轴段直径 = new LentilToolbox.TextBoxDouble();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.Values_Bev = new System.Windows.Forms.GroupBox();
-            this.Bev_B = new System.Windows.Forms.TextBox();
-            this.Bev_z = new System.Windows.Forms.TextBox();
-            this.Bev_m = new System.Windows.Forms.TextBox();
+            this.锥齿轮齿宽 = new LentilToolbox.TextBoxDouble();
+            this.锥齿轮齿数 = new LentilToolbox.TextBoxInt();
+            this.大端模数 = new LentilToolbox.TextBoxInt();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Bev_Alpha = new System.Windows.Forms.TextBox();
+            this.锥齿轮压力角 = new LentilToolbox.TextBoxDouble();
             this.label4 = new System.Windows.Forms.Label();
-            this.Bev_C = new System.Windows.Forms.TextBox();
-            this.Bev_A = new System.Windows.Forms.TextBox();
-            this.Bev_Theta = new System.Windows.Forms.TextBox();
+            this.齿槽深 = new LentilToolbox.TextBoxDouble();
+            this.齿胚厚 = new LentilToolbox.TextBoxDouble();
+            this.分锥角 = new LentilToolbox.TextBoxDouble();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Values_Sha = new System.Windows.Forms.GroupBox();
-            this.Sha_B = new System.Windows.Forms.TextBox();
-            this.Sha_d = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.Values_Cyl = new System.Windows.Forms.GroupBox();
-            this.Cyl_B = new System.Windows.Forms.TextBox();
-            this.Cyl_z = new System.Windows.Forms.TextBox();
-            this.Cyl_m = new System.Windows.Forms.TextBox();
+            this.圆柱齿轮齿宽 = new LentilToolbox.TextBoxDouble();
+            this.圆柱齿轮齿数 = new LentilToolbox.TextBoxInt();
+            this.圆柱齿轮模数 = new LentilToolbox.TextBoxInt();
             this.L_Beta = new System.Windows.Forms.Label();
-            this.Cyl_Alpha = new System.Windows.Forms.TextBox();
+            this.圆柱齿轮压力角 = new LentilToolbox.TextBoxDouble();
             this.label15 = new System.Windows.Forms.Label();
-            this.Cyl_Beta = new System.Windows.Forms.TextBox();
+            this.圆柱齿轮螺旋角 = new LentilToolbox.TextBoxDouble();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.Delete = new System.Windows.Forms.Button();
             this.FtrHead.SuspendLayout();
-            this.Values_Bev.SuspendLayout();
             this.Values_Sha.SuspendLayout();
+            this.Values_Bev.SuspendLayout();
             this.Values_Cyl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,9 +88,9 @@
             this.FtrHead.Controls.Add(this.GearDir);
             this.FtrHead.Controls.Add(this.GearType);
             this.FtrHead.Controls.Add(this.ShaftType);
-            this.FtrHead.Controls.Add(this.Values_Bev);
             this.FtrHead.Controls.Add(this.Values_Cyl);
             this.FtrHead.Controls.Add(this.Values_Sha);
+            this.FtrHead.Controls.Add(this.Values_Bev);
             this.FtrHead.Dock = System.Windows.Forms.DockStyle.Left;
             this.FtrHead.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FtrHead.Location = new System.Drawing.Point(0, 0);
@@ -162,30 +162,73 @@
             this.ShaftType.Tag = "";
             this.ShaftType.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
-            // Delete
+            // Values_Sha
             // 
-            this.Delete.Location = new System.Drawing.Point(327, 155);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(21, 60);
-            this.Delete.TabIndex = 0;
-            this.Delete.TabStop = false;
-            this.Delete.Text = "-";
-            this.Delete.UseVisualStyleBackColor = true;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            this.Values_Sha.Controls.Add(this.轴段宽度);
+            this.Values_Sha.Controls.Add(this.轴段直径);
+            this.Values_Sha.Controls.Add(this.label13);
+            this.Values_Sha.Controls.Add(this.label14);
+            this.Values_Sha.Location = new System.Drawing.Point(12, 89);
+            this.Values_Sha.Name = "Values_Sha";
+            this.Values_Sha.Size = new System.Drawing.Size(306, 80);
+            this.Values_Sha.TabIndex = 12;
+            this.Values_Sha.TabStop = false;
+            this.Values_Sha.Text = "设计参数";
+            this.Values_Sha.Visible = false;
+            // 
+            // 轴段宽度
+            // 
+            this.轴段宽度.Location = new System.Drawing.Point(80, 20);
+            this.轴段宽度.Name = "轴段宽度";
+            this.轴段宽度.Size = new System.Drawing.Size(57, 23);
+            this.轴段宽度.TabIndex = 5;
+            this.轴段宽度.Text = "18";
+            this.轴段宽度.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // 轴段直径
+            // 
+            this.轴段直径.Location = new System.Drawing.Point(80, 45);
+            this.轴段直径.Name = "轴段直径";
+            this.轴段直径.Size = new System.Drawing.Size(57, 23);
+            this.轴段直径.TabIndex = 6;
+            this.轴段直径.Text = "25";
+            this.轴段直径.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(6, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 19);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "轴段宽度";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(6, 46);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 19);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "轴段直径";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Values_Bev
             // 
-            this.Values_Bev.Controls.Add(this.Bev_B);
-            this.Values_Bev.Controls.Add(this.Bev_z);
-            this.Values_Bev.Controls.Add(this.Bev_m);
+            this.Values_Bev.Controls.Add(this.锥齿轮齿宽);
+            this.Values_Bev.Controls.Add(this.锥齿轮齿数);
+            this.Values_Bev.Controls.Add(this.大端模数);
             this.Values_Bev.Controls.Add(this.label1);
             this.Values_Bev.Controls.Add(this.label2);
             this.Values_Bev.Controls.Add(this.label3);
-            this.Values_Bev.Controls.Add(this.Bev_Alpha);
+            this.Values_Bev.Controls.Add(this.锥齿轮压力角);
             this.Values_Bev.Controls.Add(this.label4);
-            this.Values_Bev.Controls.Add(this.Bev_C);
-            this.Values_Bev.Controls.Add(this.Bev_A);
-            this.Values_Bev.Controls.Add(this.Bev_Theta);
+            this.Values_Bev.Controls.Add(this.齿槽深);
+            this.Values_Bev.Controls.Add(this.齿胚厚);
+            this.Values_Bev.Controls.Add(this.分锥角);
             this.Values_Bev.Controls.Add(this.label5);
             this.Values_Bev.Controls.Add(this.label6);
             this.Values_Bev.Controls.Add(this.label7);
@@ -197,32 +240,32 @@
             this.Values_Bev.Text = "设计参数";
             this.Values_Bev.Visible = false;
             // 
-            // Bev_B
+            // 锥齿轮齿宽
             // 
-            this.Bev_B.Location = new System.Drawing.Point(80, 20);
-            this.Bev_B.Name = "Bev_B";
-            this.Bev_B.Size = new System.Drawing.Size(57, 23);
-            this.Bev_B.TabIndex = 5;
-            this.Bev_B.Text = "18";
-            this.Bev_B.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.锥齿轮齿宽.Location = new System.Drawing.Point(80, 20);
+            this.锥齿轮齿宽.Name = "锥齿轮齿宽";
+            this.锥齿轮齿宽.Size = new System.Drawing.Size(57, 23);
+            this.锥齿轮齿宽.TabIndex = 5;
+            this.锥齿轮齿宽.Text = "18";
+            this.锥齿轮齿宽.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Bev_z
+            // 锥齿轮齿数
             // 
-            this.Bev_z.Location = new System.Drawing.Point(80, 45);
-            this.Bev_z.Name = "Bev_z";
-            this.Bev_z.Size = new System.Drawing.Size(57, 23);
-            this.Bev_z.TabIndex = 6;
-            this.Bev_z.Text = "25";
-            this.Bev_z.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.锥齿轮齿数.Location = new System.Drawing.Point(80, 45);
+            this.锥齿轮齿数.Name = "锥齿轮齿数";
+            this.锥齿轮齿数.Size = new System.Drawing.Size(57, 23);
+            this.锥齿轮齿数.TabIndex = 6;
+            this.锥齿轮齿数.Text = "25";
+            this.锥齿轮齿数.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Bev_m
+            // 大端模数
             // 
-            this.Bev_m.Location = new System.Drawing.Point(80, 70);
-            this.Bev_m.Name = "Bev_m";
-            this.Bev_m.Size = new System.Drawing.Size(57, 23);
-            this.Bev_m.TabIndex = 7;
-            this.Bev_m.Text = "4";
-            this.Bev_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.大端模数.Location = new System.Drawing.Point(80, 70);
+            this.大端模数.Name = "大端模数";
+            this.大端模数.Size = new System.Drawing.Size(57, 23);
+            this.大端模数.TabIndex = 7;
+            this.大端模数.Text = "4";
+            this.大端模数.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -257,14 +300,14 @@
             this.label3.Text = "螺旋角";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Bev_Alpha
+            // 锥齿轮压力角
             // 
-            this.Bev_Alpha.Location = new System.Drawing.Point(80, 95);
-            this.Bev_Alpha.Name = "Bev_Alpha";
-            this.Bev_Alpha.Size = new System.Drawing.Size(57, 23);
-            this.Bev_Alpha.TabIndex = 8;
-            this.Bev_Alpha.Text = "20";
-            this.Bev_Alpha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.锥齿轮压力角.Location = new System.Drawing.Point(80, 95);
+            this.锥齿轮压力角.Name = "锥齿轮压力角";
+            this.锥齿轮压力角.Size = new System.Drawing.Size(57, 23);
+            this.锥齿轮压力角.TabIndex = 8;
+            this.锥齿轮压力角.Text = "20";
+            this.锥齿轮压力角.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -277,32 +320,32 @@
             this.label4.Text = "压力角";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Bev_C
+            // 齿槽深
             // 
-            this.Bev_C.Location = new System.Drawing.Point(226, 45);
-            this.Bev_C.Name = "Bev_C";
-            this.Bev_C.Size = new System.Drawing.Size(57, 23);
-            this.Bev_C.TabIndex = 11;
-            this.Bev_C.Text = "6";
-            this.Bev_C.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.齿槽深.Location = new System.Drawing.Point(226, 45);
+            this.齿槽深.Name = "齿槽深";
+            this.齿槽深.Size = new System.Drawing.Size(57, 23);
+            this.齿槽深.TabIndex = 11;
+            this.齿槽深.Text = "6";
+            this.齿槽深.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Bev_A
+            // 齿胚厚
             // 
-            this.Bev_A.Location = new System.Drawing.Point(226, 20);
-            this.Bev_A.Name = "Bev_A";
-            this.Bev_A.Size = new System.Drawing.Size(57, 23);
-            this.Bev_A.TabIndex = 10;
-            this.Bev_A.Text = "30";
-            this.Bev_A.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.齿胚厚.Location = new System.Drawing.Point(226, 20);
+            this.齿胚厚.Name = "齿胚厚";
+            this.齿胚厚.Size = new System.Drawing.Size(57, 23);
+            this.齿胚厚.TabIndex = 10;
+            this.齿胚厚.Text = "30";
+            this.齿胚厚.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Bev_Theta
+            // 分锥角
             // 
-            this.Bev_Theta.Location = new System.Drawing.Point(80, 120);
-            this.Bev_Theta.Name = "Bev_Theta";
-            this.Bev_Theta.Size = new System.Drawing.Size(57, 23);
-            this.Bev_Theta.TabIndex = 9;
-            this.Bev_Theta.Text = "45";
-            this.Bev_Theta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.分锥角.Location = new System.Drawing.Point(80, 120);
+            this.分锥角.Name = "分锥角";
+            this.分锥角.Size = new System.Drawing.Size(57, 23);
+            this.分锥角.TabIndex = 9;
+            this.分锥角.Text = "45";
+            this.分锥角.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -337,69 +380,15 @@
             this.label7.Text = "齿数";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Values_Sha
-            // 
-            this.Values_Sha.Controls.Add(this.Sha_B);
-            this.Values_Sha.Controls.Add(this.Sha_d);
-            this.Values_Sha.Controls.Add(this.label13);
-            this.Values_Sha.Controls.Add(this.label14);
-            this.Values_Sha.Location = new System.Drawing.Point(12, 89);
-            this.Values_Sha.Name = "Values_Sha";
-            this.Values_Sha.Size = new System.Drawing.Size(306, 80);
-            this.Values_Sha.TabIndex = 12;
-            this.Values_Sha.TabStop = false;
-            this.Values_Sha.Text = "设计参数";
-            this.Values_Sha.Visible = false;
-            // 
-            // Sha_B
-            // 
-            this.Sha_B.Location = new System.Drawing.Point(80, 20);
-            this.Sha_B.Name = "Sha_B";
-            this.Sha_B.Size = new System.Drawing.Size(57, 23);
-            this.Sha_B.TabIndex = 5;
-            this.Sha_B.Text = "18";
-            this.Sha_B.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Sha_d
-            // 
-            this.Sha_d.Location = new System.Drawing.Point(80, 45);
-            this.Sha_d.Name = "Sha_d";
-            this.Sha_d.Size = new System.Drawing.Size(57, 23);
-            this.Sha_d.TabIndex = 6;
-            this.Sha_d.Text = "25";
-            this.Sha_d.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(6, 21);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 19);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "轴段宽度";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(6, 46);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 19);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "轴段直径";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Values_Cyl
             // 
-            this.Values_Cyl.Controls.Add(this.Cyl_B);
-            this.Values_Cyl.Controls.Add(this.Cyl_z);
-            this.Values_Cyl.Controls.Add(this.Cyl_m);
+            this.Values_Cyl.Controls.Add(this.圆柱齿轮齿宽);
+            this.Values_Cyl.Controls.Add(this.圆柱齿轮齿数);
+            this.Values_Cyl.Controls.Add(this.圆柱齿轮模数);
             this.Values_Cyl.Controls.Add(this.L_Beta);
-            this.Values_Cyl.Controls.Add(this.Cyl_Alpha);
+            this.Values_Cyl.Controls.Add(this.圆柱齿轮压力角);
             this.Values_Cyl.Controls.Add(this.label15);
-            this.Values_Cyl.Controls.Add(this.Cyl_Beta);
+            this.Values_Cyl.Controls.Add(this.圆柱齿轮螺旋角);
             this.Values_Cyl.Controls.Add(this.label16);
             this.Values_Cyl.Controls.Add(this.label17);
             this.Values_Cyl.Controls.Add(this.label18);
@@ -411,32 +400,32 @@
             this.Values_Cyl.Text = "设计参数";
             this.Values_Cyl.Visible = false;
             // 
-            // Cyl_B
+            // 圆柱齿轮齿宽
             // 
-            this.Cyl_B.Location = new System.Drawing.Point(80, 20);
-            this.Cyl_B.Name = "Cyl_B";
-            this.Cyl_B.Size = new System.Drawing.Size(57, 23);
-            this.Cyl_B.TabIndex = 5;
-            this.Cyl_B.Text = "18";
-            this.Cyl_B.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.圆柱齿轮齿宽.Location = new System.Drawing.Point(80, 20);
+            this.圆柱齿轮齿宽.Name = "圆柱齿轮齿宽";
+            this.圆柱齿轮齿宽.Size = new System.Drawing.Size(57, 23);
+            this.圆柱齿轮齿宽.TabIndex = 5;
+            this.圆柱齿轮齿宽.Text = "18";
+            this.圆柱齿轮齿宽.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Cyl_z
+            // 圆柱齿轮齿数
             // 
-            this.Cyl_z.Location = new System.Drawing.Point(80, 45);
-            this.Cyl_z.Name = "Cyl_z";
-            this.Cyl_z.Size = new System.Drawing.Size(57, 23);
-            this.Cyl_z.TabIndex = 6;
-            this.Cyl_z.Text = "25";
-            this.Cyl_z.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.圆柱齿轮齿数.Location = new System.Drawing.Point(80, 45);
+            this.圆柱齿轮齿数.Name = "圆柱齿轮齿数";
+            this.圆柱齿轮齿数.Size = new System.Drawing.Size(57, 23);
+            this.圆柱齿轮齿数.TabIndex = 6;
+            this.圆柱齿轮齿数.Text = "25";
+            this.圆柱齿轮齿数.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Cyl_m
+            // 圆柱齿轮模数
             // 
-            this.Cyl_m.Location = new System.Drawing.Point(80, 70);
-            this.Cyl_m.Name = "Cyl_m";
-            this.Cyl_m.Size = new System.Drawing.Size(57, 23);
-            this.Cyl_m.TabIndex = 7;
-            this.Cyl_m.Text = "4";
-            this.Cyl_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.圆柱齿轮模数.Location = new System.Drawing.Point(80, 70);
+            this.圆柱齿轮模数.Name = "圆柱齿轮模数";
+            this.圆柱齿轮模数.Size = new System.Drawing.Size(57, 23);
+            this.圆柱齿轮模数.TabIndex = 7;
+            this.圆柱齿轮模数.Text = "4";
+            this.圆柱齿轮模数.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // L_Beta
             // 
@@ -449,14 +438,14 @@
             this.L_Beta.Text = "螺旋角";
             this.L_Beta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Cyl_Alpha
+            // 圆柱齿轮压力角
             // 
-            this.Cyl_Alpha.Location = new System.Drawing.Point(80, 95);
-            this.Cyl_Alpha.Name = "Cyl_Alpha";
-            this.Cyl_Alpha.Size = new System.Drawing.Size(57, 23);
-            this.Cyl_Alpha.TabIndex = 8;
-            this.Cyl_Alpha.Text = "20";
-            this.Cyl_Alpha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.圆柱齿轮压力角.Location = new System.Drawing.Point(80, 95);
+            this.圆柱齿轮压力角.Name = "圆柱齿轮压力角";
+            this.圆柱齿轮压力角.Size = new System.Drawing.Size(57, 23);
+            this.圆柱齿轮压力角.TabIndex = 8;
+            this.圆柱齿轮压力角.Text = "20";
+            this.圆柱齿轮压力角.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -469,14 +458,14 @@
             this.label15.Text = "压力角";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Cyl_Beta
+            // 圆柱齿轮螺旋角
             // 
-            this.Cyl_Beta.Location = new System.Drawing.Point(80, 120);
-            this.Cyl_Beta.Name = "Cyl_Beta";
-            this.Cyl_Beta.Size = new System.Drawing.Size(57, 23);
-            this.Cyl_Beta.TabIndex = 9;
-            this.Cyl_Beta.Text = "45";
-            this.Cyl_Beta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.圆柱齿轮螺旋角.Location = new System.Drawing.Point(80, 120);
+            this.圆柱齿轮螺旋角.Name = "圆柱齿轮螺旋角";
+            this.圆柱齿轮螺旋角.Size = new System.Drawing.Size(57, 23);
+            this.圆柱齿轮螺旋角.TabIndex = 9;
+            this.圆柱齿轮螺旋角.Text = "45";
+            this.圆柱齿轮螺旋角.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label16
             // 
@@ -511,6 +500,17 @@
             this.label18.Text = "齿数";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(327, 155);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(21, 60);
+            this.Delete.TabIndex = 0;
+            this.Delete.TabStop = false;
+            this.Delete.Text = "-";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // ftrwin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -524,10 +524,10 @@
             this.Name = "ftrwin";
             this.Text = "ftrwin";
             this.FtrHead.ResumeLayout(false);
-            this.Values_Bev.ResumeLayout(false);
-            this.Values_Bev.PerformLayout();
             this.Values_Sha.ResumeLayout(false);
             this.Values_Sha.PerformLayout();
+            this.Values_Bev.ResumeLayout(false);
+            this.Values_Bev.PerformLayout();
             this.Values_Cyl.ResumeLayout(false);
             this.Values_Cyl.PerformLayout();
             this.ResumeLayout(false);
@@ -543,33 +543,33 @@
         private System.Windows.Forms.ComboBox GearDir;
         private System.Windows.Forms.ComboBox GearFace;
         private System.Windows.Forms.GroupBox Values_Bev;
-        private System.Windows.Forms.TextBox Bev_B;
-        private System.Windows.Forms.TextBox Bev_z;
-        private System.Windows.Forms.TextBox Bev_m;
+        private TextBoxDouble 锥齿轮齿宽;
+        private TextBoxInt 锥齿轮齿数;
+        private TextBoxInt 大端模数;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Bev_Alpha;
+        private TextBoxDouble 锥齿轮压力角;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Bev_C;
-        private System.Windows.Forms.TextBox Bev_A;
-        private System.Windows.Forms.TextBox Bev_Theta;
+        private TextBoxDouble 齿槽深;
+        private TextBoxDouble 齿胚厚;
+        private TextBoxDouble 分锥角;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox Values_Sha;
-        private System.Windows.Forms.TextBox Sha_B;
-        private System.Windows.Forms.TextBox Sha_d;
+        private TextBoxDouble 轴段宽度;
+        private TextBoxDouble 轴段直径;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox Values_Cyl;
-        private System.Windows.Forms.TextBox Cyl_B;
-        private System.Windows.Forms.TextBox Cyl_z;
-        private System.Windows.Forms.TextBox Cyl_m;
+        private TextBoxDouble 圆柱齿轮齿宽;
+        private TextBoxInt 圆柱齿轮齿数;
+        private TextBoxInt 圆柱齿轮模数;
         private System.Windows.Forms.Label L_Beta;
-        private System.Windows.Forms.TextBox Cyl_Alpha;
+        private TextBoxDouble 圆柱齿轮压力角;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox Cyl_Beta;
+        private TextBoxDouble 圆柱齿轮螺旋角;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
