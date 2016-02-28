@@ -21,27 +21,22 @@ namespace LentilToolbox
     public partial class Shaftwin : Form
     {
         private List<ftrwin> Ftrlist;//轴段特征窗口的list
-        private Shaftwin oShaftwin;//该轴的对象本体
         public Shaftwin()
         {
             InitializeComponent();
             hScrollBar1.BringToFront();
-        }
-        public void initialize(Shaftwin oshaftwin)
-        {
             Ftrlist = new List<ftrwin>();
-            oShaftwin = oshaftwin;
             AddAndRefresh(0);
         }
         public bool AddAndRefresh(int position)
         {
-            Ftrlist.Insert(position,new ftrwin(oShaftwin));
+            Ftrlist.Insert(position,new ftrwin(this));
             Ftrlist[position].TopLevel = false;
             ListShower.Controls.Add(Ftrlist[position]);
             Ftrlist[position].Show();//显示新插入的轴段窗口
             int a = Ftrlist.Count, i;
             ListShower.Width = a * 350;//调整容器宽度
-            rewin();//根据总窗口和容器宽度调整滚动条大小
+            rewin();//根据总窗口和容器宽度1q24调整滚动条大小
             for (i=position;i<a;++i)
             {
                 Ftrlist[i].RefRank(i);

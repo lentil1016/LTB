@@ -57,7 +57,6 @@ Public Class shaftsection
         circle2D1 = factory2D1.CreateClosedCircle(0#, 0#, 61.5)
         Dim constraints1 As Constraints
         constraints1 = sketch1.Constraints
-
         Dim constraint1 As Constraint
         constraint1 = constraints1.AddMonoEltCst(CatConstraintType.catCstTypeRadius, circle2D1)
         constraint1.Dimension.Value = d / 2

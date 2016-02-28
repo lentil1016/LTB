@@ -29,29 +29,47 @@
         private void InitializeComponent()
         {
             this.ADD = new System.Windows.Forms.Button();
-            this.values = new System.Windows.Forms.GroupBox();
-            this.GtextBox1 = new System.Windows.Forms.TextBox();
-            this.GtextBox2 = new System.Windows.Forms.TextBox();
-            this.GtextBox3 = new System.Windows.Forms.TextBox();
-            this.slot = new System.Windows.Forms.Label();
-            this.chipeihou = new System.Windows.Forms.Label();
-            this.Beta = new System.Windows.Forms.Label();
-            this.GtextBox4 = new System.Windows.Forms.TextBox();
-            this.Alpha = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.GtextBox5 = new System.Windows.Forms.TextBox();
-            this.m = new System.Windows.Forms.Label();
-            this.breadth = new System.Windows.Forms.Label();
-            this.z = new System.Windows.Forms.Label();
             this.FtrHead = new System.Windows.Forms.GroupBox();
             this.GearFace = new System.Windows.Forms.ComboBox();
             this.GearDir = new System.Windows.Forms.ComboBox();
             this.GearType = new System.Windows.Forms.ComboBox();
             this.ShaftType = new System.Windows.Forms.ComboBox();
             this.Delete = new System.Windows.Forms.Button();
-            this.values.SuspendLayout();
+            this.Values_Bev = new System.Windows.Forms.GroupBox();
+            this.Bev_B = new System.Windows.Forms.TextBox();
+            this.Bev_z = new System.Windows.Forms.TextBox();
+            this.Bev_m = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Bev_Alpha = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Bev_C = new System.Windows.Forms.TextBox();
+            this.Bev_A = new System.Windows.Forms.TextBox();
+            this.Bev_Theta = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Values_Sha = new System.Windows.Forms.GroupBox();
+            this.Sha_B = new System.Windows.Forms.TextBox();
+            this.Sha_d = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Values_Cyl = new System.Windows.Forms.GroupBox();
+            this.Cyl_B = new System.Windows.Forms.TextBox();
+            this.Cyl_z = new System.Windows.Forms.TextBox();
+            this.Cyl_m = new System.Windows.Forms.TextBox();
+            this.L_Beta = new System.Windows.Forms.Label();
+            this.Cyl_Alpha = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Cyl_Beta = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.FtrHead.SuspendLayout();
+            this.Values_Bev.SuspendLayout();
+            this.Values_Sha.SuspendLayout();
+            this.Values_Cyl.SuspendLayout();
             this.SuspendLayout();
             // 
             // ADD
@@ -64,177 +82,15 @@
             this.ADD.UseVisualStyleBackColor = true;
             this.ADD.Click += new System.EventHandler(this.ADD_Click);
             // 
-            // values
-            // 
-            this.values.Controls.Add(this.GtextBox1);
-            this.values.Controls.Add(this.GtextBox2);
-            this.values.Controls.Add(this.GtextBox3);
-            this.values.Controls.Add(this.slot);
-            this.values.Controls.Add(this.chipeihou);
-            this.values.Controls.Add(this.Beta);
-            this.values.Controls.Add(this.GtextBox4);
-            this.values.Controls.Add(this.Alpha);
-            this.values.Controls.Add(this.textBox2);
-            this.values.Controls.Add(this.textBox1);
-            this.values.Controls.Add(this.GtextBox5);
-            this.values.Controls.Add(this.m);
-            this.values.Controls.Add(this.breadth);
-            this.values.Controls.Add(this.z);
-            this.values.Location = new System.Drawing.Point(12, 84);
-            this.values.Name = "values";
-            this.values.Size = new System.Drawing.Size(306, 150);
-            this.values.TabIndex = 4;
-            this.values.TabStop = false;
-            this.values.Text = "设计参数";
-            this.values.Visible = false;
-            // 
-            // GtextBox1
-            // 
-            this.GtextBox1.Location = new System.Drawing.Point(80, 20);
-            this.GtextBox1.Name = "GtextBox1";
-            this.GtextBox1.Size = new System.Drawing.Size(57, 23);
-            this.GtextBox1.TabIndex = 5;
-            this.GtextBox1.Text = "18";
-            this.GtextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // GtextBox2
-            // 
-            this.GtextBox2.Location = new System.Drawing.Point(80, 45);
-            this.GtextBox2.Name = "GtextBox2";
-            this.GtextBox2.Size = new System.Drawing.Size(57, 23);
-            this.GtextBox2.TabIndex = 6;
-            this.GtextBox2.Text = "25";
-            this.GtextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // GtextBox3
-            // 
-            this.GtextBox3.Location = new System.Drawing.Point(80, 70);
-            this.GtextBox3.Name = "GtextBox3";
-            this.GtextBox3.Size = new System.Drawing.Size(57, 23);
-            this.GtextBox3.TabIndex = 7;
-            this.GtextBox3.Text = "4";
-            this.GtextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // slot
-            // 
-            this.slot.AutoSize = true;
-            this.slot.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.slot.Location = new System.Drawing.Point(152, 46);
-            this.slot.Name = "slot";
-            this.slot.Size = new System.Drawing.Size(48, 19);
-            this.slot.TabIndex = 2;
-            this.slot.Text = "凹槽深";
-            this.slot.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // chipeihou
-            // 
-            this.chipeihou.AutoSize = true;
-            this.chipeihou.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.chipeihou.Location = new System.Drawing.Point(152, 21);
-            this.chipeihou.Name = "chipeihou";
-            this.chipeihou.Size = new System.Drawing.Size(48, 19);
-            this.chipeihou.TabIndex = 2;
-            this.chipeihou.Text = "齿胚厚";
-            this.chipeihou.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Beta
-            // 
-            this.Beta.AutoSize = true;
-            this.Beta.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Beta.Location = new System.Drawing.Point(6, 121);
-            this.Beta.Name = "Beta";
-            this.Beta.Size = new System.Drawing.Size(48, 19);
-            this.Beta.TabIndex = 2;
-            this.Beta.Text = "螺旋角";
-            this.Beta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // GtextBox4
-            // 
-            this.GtextBox4.Location = new System.Drawing.Point(80, 95);
-            this.GtextBox4.Name = "GtextBox4";
-            this.GtextBox4.Size = new System.Drawing.Size(57, 23);
-            this.GtextBox4.TabIndex = 8;
-            this.GtextBox4.Text = "20";
-            this.GtextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Alpha
-            // 
-            this.Alpha.AutoSize = true;
-            this.Alpha.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Alpha.Location = new System.Drawing.Point(6, 96);
-            this.Alpha.Name = "Alpha";
-            this.Alpha.Size = new System.Drawing.Size(48, 19);
-            this.Alpha.TabIndex = 2;
-            this.Alpha.Text = "压力角";
-            this.Alpha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(226, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(57, 23);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "6";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(226, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(57, 23);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "30";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // GtextBox5
-            // 
-            this.GtextBox5.Location = new System.Drawing.Point(80, 120);
-            this.GtextBox5.Name = "GtextBox5";
-            this.GtextBox5.Size = new System.Drawing.Size(57, 23);
-            this.GtextBox5.TabIndex = 9;
-            this.GtextBox5.Text = "45";
-            this.GtextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // m
-            // 
-            this.m.AutoSize = true;
-            this.m.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.m.Location = new System.Drawing.Point(6, 71);
-            this.m.Name = "m";
-            this.m.Size = new System.Drawing.Size(35, 19);
-            this.m.TabIndex = 2;
-            this.m.Text = "模数";
-            this.m.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // breadth
-            // 
-            this.breadth.AutoSize = true;
-            this.breadth.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.breadth.Location = new System.Drawing.Point(6, 21);
-            this.breadth.Name = "breadth";
-            this.breadth.Size = new System.Drawing.Size(61, 19);
-            this.breadth.TabIndex = 2;
-            this.breadth.Text = "轴段宽度";
-            this.breadth.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // z
-            // 
-            this.z.AutoSize = true;
-            this.z.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.z.Location = new System.Drawing.Point(6, 46);
-            this.z.Name = "z";
-            this.z.Size = new System.Drawing.Size(35, 19);
-            this.z.TabIndex = 2;
-            this.z.Text = "齿数";
-            this.z.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // FtrHead
             // 
             this.FtrHead.Controls.Add(this.GearFace);
             this.FtrHead.Controls.Add(this.GearDir);
             this.FtrHead.Controls.Add(this.GearType);
             this.FtrHead.Controls.Add(this.ShaftType);
-            this.FtrHead.Controls.Add(this.values);
+            this.FtrHead.Controls.Add(this.Values_Bev);
+            this.FtrHead.Controls.Add(this.Values_Cyl);
+            this.FtrHead.Controls.Add(this.Values_Sha);
             this.FtrHead.Dock = System.Windows.Forms.DockStyle.Left;
             this.FtrHead.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FtrHead.Location = new System.Drawing.Point(0, 0);
@@ -317,6 +173,344 @@
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
+            // Values_Bev
+            // 
+            this.Values_Bev.Controls.Add(this.Bev_B);
+            this.Values_Bev.Controls.Add(this.Bev_z);
+            this.Values_Bev.Controls.Add(this.Bev_m);
+            this.Values_Bev.Controls.Add(this.label1);
+            this.Values_Bev.Controls.Add(this.label2);
+            this.Values_Bev.Controls.Add(this.label3);
+            this.Values_Bev.Controls.Add(this.Bev_Alpha);
+            this.Values_Bev.Controls.Add(this.label4);
+            this.Values_Bev.Controls.Add(this.Bev_C);
+            this.Values_Bev.Controls.Add(this.Bev_A);
+            this.Values_Bev.Controls.Add(this.Bev_Theta);
+            this.Values_Bev.Controls.Add(this.label5);
+            this.Values_Bev.Controls.Add(this.label6);
+            this.Values_Bev.Controls.Add(this.label7);
+            this.Values_Bev.Location = new System.Drawing.Point(12, 89);
+            this.Values_Bev.Name = "Values_Bev";
+            this.Values_Bev.Size = new System.Drawing.Size(306, 150);
+            this.Values_Bev.TabIndex = 12;
+            this.Values_Bev.TabStop = false;
+            this.Values_Bev.Text = "设计参数";
+            this.Values_Bev.Visible = false;
+            // 
+            // Bev_B
+            // 
+            this.Bev_B.Location = new System.Drawing.Point(80, 20);
+            this.Bev_B.Name = "Bev_B";
+            this.Bev_B.Size = new System.Drawing.Size(57, 23);
+            this.Bev_B.TabIndex = 5;
+            this.Bev_B.Text = "18";
+            this.Bev_B.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Bev_z
+            // 
+            this.Bev_z.Location = new System.Drawing.Point(80, 45);
+            this.Bev_z.Name = "Bev_z";
+            this.Bev_z.Size = new System.Drawing.Size(57, 23);
+            this.Bev_z.TabIndex = 6;
+            this.Bev_z.Text = "25";
+            this.Bev_z.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Bev_m
+            // 
+            this.Bev_m.Location = new System.Drawing.Point(80, 70);
+            this.Bev_m.Name = "Bev_m";
+            this.Bev_m.Size = new System.Drawing.Size(57, 23);
+            this.Bev_m.TabIndex = 7;
+            this.Bev_m.Text = "4";
+            this.Bev_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(152, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "凹槽深";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(152, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "齿胚厚";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(6, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "螺旋角";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Bev_Alpha
+            // 
+            this.Bev_Alpha.Location = new System.Drawing.Point(80, 95);
+            this.Bev_Alpha.Name = "Bev_Alpha";
+            this.Bev_Alpha.Size = new System.Drawing.Size(57, 23);
+            this.Bev_Alpha.TabIndex = 8;
+            this.Bev_Alpha.Text = "20";
+            this.Bev_Alpha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(6, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 19);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "压力角";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Bev_C
+            // 
+            this.Bev_C.Location = new System.Drawing.Point(226, 45);
+            this.Bev_C.Name = "Bev_C";
+            this.Bev_C.Size = new System.Drawing.Size(57, 23);
+            this.Bev_C.TabIndex = 11;
+            this.Bev_C.Text = "6";
+            this.Bev_C.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Bev_A
+            // 
+            this.Bev_A.Location = new System.Drawing.Point(226, 20);
+            this.Bev_A.Name = "Bev_A";
+            this.Bev_A.Size = new System.Drawing.Size(57, 23);
+            this.Bev_A.TabIndex = 10;
+            this.Bev_A.Text = "30";
+            this.Bev_A.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Bev_Theta
+            // 
+            this.Bev_Theta.Location = new System.Drawing.Point(80, 120);
+            this.Bev_Theta.Name = "Bev_Theta";
+            this.Bev_Theta.Size = new System.Drawing.Size(57, 23);
+            this.Bev_Theta.TabIndex = 9;
+            this.Bev_Theta.Text = "45";
+            this.Bev_Theta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(6, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 19);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "模数";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(6, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 19);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "齿宽";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(6, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 19);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "齿数";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Values_Sha
+            // 
+            this.Values_Sha.Controls.Add(this.Sha_B);
+            this.Values_Sha.Controls.Add(this.Sha_d);
+            this.Values_Sha.Controls.Add(this.label13);
+            this.Values_Sha.Controls.Add(this.label14);
+            this.Values_Sha.Location = new System.Drawing.Point(12, 89);
+            this.Values_Sha.Name = "Values_Sha";
+            this.Values_Sha.Size = new System.Drawing.Size(306, 80);
+            this.Values_Sha.TabIndex = 12;
+            this.Values_Sha.TabStop = false;
+            this.Values_Sha.Text = "设计参数";
+            this.Values_Sha.Visible = false;
+            // 
+            // Sha_B
+            // 
+            this.Sha_B.Location = new System.Drawing.Point(80, 20);
+            this.Sha_B.Name = "Sha_B";
+            this.Sha_B.Size = new System.Drawing.Size(57, 23);
+            this.Sha_B.TabIndex = 5;
+            this.Sha_B.Text = "18";
+            this.Sha_B.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Sha_d
+            // 
+            this.Sha_d.Location = new System.Drawing.Point(80, 45);
+            this.Sha_d.Name = "Sha_d";
+            this.Sha_d.Size = new System.Drawing.Size(57, 23);
+            this.Sha_d.TabIndex = 6;
+            this.Sha_d.Text = "25";
+            this.Sha_d.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(6, 21);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 19);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "轴段宽度";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(6, 46);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 19);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "轴段直径";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Values_Cyl
+            // 
+            this.Values_Cyl.Controls.Add(this.Cyl_B);
+            this.Values_Cyl.Controls.Add(this.Cyl_z);
+            this.Values_Cyl.Controls.Add(this.Cyl_m);
+            this.Values_Cyl.Controls.Add(this.L_Beta);
+            this.Values_Cyl.Controls.Add(this.Cyl_Alpha);
+            this.Values_Cyl.Controls.Add(this.label15);
+            this.Values_Cyl.Controls.Add(this.Cyl_Beta);
+            this.Values_Cyl.Controls.Add(this.label16);
+            this.Values_Cyl.Controls.Add(this.label17);
+            this.Values_Cyl.Controls.Add(this.label18);
+            this.Values_Cyl.Location = new System.Drawing.Point(12, 89);
+            this.Values_Cyl.Name = "Values_Cyl";
+            this.Values_Cyl.Size = new System.Drawing.Size(306, 150);
+            this.Values_Cyl.TabIndex = 12;
+            this.Values_Cyl.TabStop = false;
+            this.Values_Cyl.Text = "设计参数";
+            this.Values_Cyl.Visible = false;
+            // 
+            // Cyl_B
+            // 
+            this.Cyl_B.Location = new System.Drawing.Point(80, 20);
+            this.Cyl_B.Name = "Cyl_B";
+            this.Cyl_B.Size = new System.Drawing.Size(57, 23);
+            this.Cyl_B.TabIndex = 5;
+            this.Cyl_B.Text = "18";
+            this.Cyl_B.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Cyl_z
+            // 
+            this.Cyl_z.Location = new System.Drawing.Point(80, 45);
+            this.Cyl_z.Name = "Cyl_z";
+            this.Cyl_z.Size = new System.Drawing.Size(57, 23);
+            this.Cyl_z.TabIndex = 6;
+            this.Cyl_z.Text = "25";
+            this.Cyl_z.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Cyl_m
+            // 
+            this.Cyl_m.Location = new System.Drawing.Point(80, 70);
+            this.Cyl_m.Name = "Cyl_m";
+            this.Cyl_m.Size = new System.Drawing.Size(57, 23);
+            this.Cyl_m.TabIndex = 7;
+            this.Cyl_m.Text = "4";
+            this.Cyl_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // L_Beta
+            // 
+            this.L_Beta.AutoSize = true;
+            this.L_Beta.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.L_Beta.Location = new System.Drawing.Point(6, 121);
+            this.L_Beta.Name = "L_Beta";
+            this.L_Beta.Size = new System.Drawing.Size(48, 19);
+            this.L_Beta.TabIndex = 2;
+            this.L_Beta.Text = "螺旋角";
+            this.L_Beta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Cyl_Alpha
+            // 
+            this.Cyl_Alpha.Location = new System.Drawing.Point(80, 95);
+            this.Cyl_Alpha.Name = "Cyl_Alpha";
+            this.Cyl_Alpha.Size = new System.Drawing.Size(57, 23);
+            this.Cyl_Alpha.TabIndex = 8;
+            this.Cyl_Alpha.Text = "20";
+            this.Cyl_Alpha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(6, 96);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 19);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "压力角";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Cyl_Beta
+            // 
+            this.Cyl_Beta.Location = new System.Drawing.Point(80, 120);
+            this.Cyl_Beta.Name = "Cyl_Beta";
+            this.Cyl_Beta.Size = new System.Drawing.Size(57, 23);
+            this.Cyl_Beta.TabIndex = 9;
+            this.Cyl_Beta.Text = "45";
+            this.Cyl_Beta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.Location = new System.Drawing.Point(6, 71);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(35, 19);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "模数";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(6, 21);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 19);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "齿宽";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label18.Location = new System.Drawing.Point(6, 46);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(35, 19);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "齿数";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ftrwin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -329,35 +523,55 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ftrwin";
             this.Text = "ftrwin";
-            this.values.ResumeLayout(false);
-            this.values.PerformLayout();
             this.FtrHead.ResumeLayout(false);
+            this.Values_Bev.ResumeLayout(false);
+            this.Values_Bev.PerformLayout();
+            this.Values_Sha.ResumeLayout(false);
+            this.Values_Sha.PerformLayout();
+            this.Values_Cyl.ResumeLayout(false);
+            this.Values_Cyl.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button ADD;
-        private System.Windows.Forms.GroupBox values;
-        private System.Windows.Forms.TextBox GtextBox1;
-        private System.Windows.Forms.TextBox GtextBox2;
-        private System.Windows.Forms.TextBox GtextBox3;
-        private System.Windows.Forms.Label Beta;
-        private System.Windows.Forms.TextBox GtextBox4;
-        private System.Windows.Forms.Label Alpha;
-        private System.Windows.Forms.TextBox GtextBox5;
-        private System.Windows.Forms.Label m;
-        private System.Windows.Forms.Label breadth;
-        private System.Windows.Forms.Label z;
         private System.Windows.Forms.GroupBox FtrHead;
         private System.Windows.Forms.ComboBox ShaftType;
         private System.Windows.Forms.ComboBox GearType;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.ComboBox GearDir;
         private System.Windows.Forms.ComboBox GearFace;
-        private System.Windows.Forms.Label chipeihou;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label slot;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox Values_Bev;
+        private System.Windows.Forms.TextBox Bev_B;
+        private System.Windows.Forms.TextBox Bev_z;
+        private System.Windows.Forms.TextBox Bev_m;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Bev_Alpha;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Bev_C;
+        private System.Windows.Forms.TextBox Bev_A;
+        private System.Windows.Forms.TextBox Bev_Theta;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox Values_Sha;
+        private System.Windows.Forms.TextBox Sha_B;
+        private System.Windows.Forms.TextBox Sha_d;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox Values_Cyl;
+        private System.Windows.Forms.TextBox Cyl_B;
+        private System.Windows.Forms.TextBox Cyl_z;
+        private System.Windows.Forms.TextBox Cyl_m;
+        private System.Windows.Forms.Label L_Beta;
+        private System.Windows.Forms.TextBox Cyl_Alpha;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox Cyl_Beta;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

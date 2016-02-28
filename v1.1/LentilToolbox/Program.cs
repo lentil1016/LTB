@@ -17,9 +17,7 @@ namespace LentilToolbox
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Shaftwin oShaftwin =new Shaftwin();
-            oShaftwin.initialize(oShaftwin);
-            Application.Run(oShaftwin);
+            Application.Run(new Shaftwin());
         }
     }
 }
