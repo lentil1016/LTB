@@ -51,6 +51,7 @@
             this.ListShower.Name = "ListShower";
             this.ListShower.Size = new System.Drawing.Size(859, 364);
             this.ListShower.TabIndex = 0;
+            this.ListShower.Paint += new System.Windows.Forms.PaintEventHandler(this.ListShower_Paint);
             // 
             // hScrollBar1
             // 

@@ -24,6 +24,8 @@ namespace LentilToolbox
         public Shaftwin oShaftwin;
         private int B_flat=0;
         private double dBeta;
+        private double B;
+        private double d;
         public ftrwin(Shaftwin oshaftwin)
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace LentilToolbox
             GearFace.Text = "(请选择锥面朝向)";
         }
         
+        //--------------------插入删除及排序相关---------------------
         public void RefRank(int a)
         {
             rank=a;
@@ -49,6 +52,7 @@ namespace LentilToolbox
             oShaftwin.DeleteAndRefresh(rank);
         }
 
+        //---------------------下拉选单设置阶段--------------------------
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if(ShaftType.Text != "(请选择轴段类型)")
@@ -83,8 +87,6 @@ namespace LentilToolbox
                         GearFace.Visible = true;
                         GearType.Visible = false;
                         GearFace.Top = 22;
-                        轴段宽度.Visible = true;
-                        轴段直径.Visible = true;
                         GearDir.Visible = false;
                     }
                 }
@@ -128,9 +130,20 @@ namespace LentilToolbox
                 GearDir.Visible = false;
             }
         }
+
+        private void GearDir_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (GearDir.Text == "(请选择旋向)")
+                B_flat = 0;
+            else if (GearDir.Text == "左旋")
+                B_flat = 1;
+            else
+                B_flat = 2;
+        }
+
+        //--------------------------建模阶段------------------------------
         public double modeling(double Height,iPartDoc oiPartDoc)
         {
-            double B;
             if (ShaftType.Text!= "(请选择轴段类型)")
             {
                 if(ShaftType.Text == "普通轴段")//普通轴段
@@ -176,16 +189,6 @@ namespace LentilToolbox
             return B;
         }
 
-        private void GearDir_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (GearDir.Text == "(请选择旋向)")
-                B_flat = 0;
-            else if (GearDir.Text == "左旋")
-                B_flat = 1;
-            else
-                B_flat = 2;
-        }
-
         private void GearFace_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
@@ -196,6 +199,8 @@ namespace LentilToolbox
         }
         
     }
+
+    //-------------------派生文本框类----------------------
     public class TextBoxPlus:TextBox
     {
         public TextBoxPlus ()
@@ -206,37 +211,52 @@ namespace LentilToolbox
         {
             Check();
         }
-        virtual protected void Check()
+        virtual public bool Check()
         {
+            return false;
         }
     }
     public class TextBoxInt:TextBoxPlus
     {
         private int value;
-        override protected void Check()
+        override public bool Check()
         {
             if (Regex.IsMatch(Text, @"^\d+$"))
+            {
                 value = Convert.ToInt32(Text);
+                return true;
+            }
             else
+            {
                 MessageBox.Show(Name + "一般是正整数值，请填写一个正整数");
+                return false;            
+            }
         }
         public int consult()
         {
+            Check();
             return value;
         }
     }
     public class TextBoxDouble : TextBoxPlus
     {
         private double value=0;
-        override protected void Check()
+        override public bool Check()
         {
             if (Regex.IsMatch(Text, @"^\d+(\.\d+)?$"))
+            {
                 value = Convert.ToDouble(Text);
+                return true;
+            }
             else
+            {
                 MessageBox.Show(Name + "一般是正实数值，请填写一个正实数");
+                return false;
+            }
         }
         public double consult()
         {
+            Check();
             return value;
         }
     }

@@ -110,5 +110,10 @@ namespace LentilToolbox
                 }
             }
         }
+
+        private void ListShower_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
