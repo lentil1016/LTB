@@ -28,6 +28,7 @@ namespace LentilToolbox
             Ftrlist = new List<ftrwin>();
             AddAndRefresh(0);
         }
+
         public bool AddAndRefresh(int position)
         {
             Ftrlist.Insert(position,new ftrwin(this));
@@ -45,6 +46,7 @@ namespace LentilToolbox
 
             return true;
         }
+
         public bool DeleteAndRefresh(int position)
         {
             Ftrlist[position+1].Visible = false;
@@ -59,6 +61,7 @@ namespace LentilToolbox
             }//更新各“第n段轴段”中的代号n及显示位置
             return true;
         }
+
         private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
         {
 
@@ -87,6 +90,11 @@ namespace LentilToolbox
         private void Shaftwin_SizeChanged(object sender, System.EventArgs e)
         {
             rewin();
+        }
+
+        public void regraph()
+        {
+            preview.refresh(Ftrlist);
         }
 
         //----------------生成零件阶段------------------------

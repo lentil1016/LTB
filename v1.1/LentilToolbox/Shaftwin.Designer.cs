@@ -32,15 +32,14 @@
             this.ListShower = new System.Windows.Forms.Panel();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.preview = new Preview();
             this.Generate = new System.Windows.Forms.Button();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.preview.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListShower
@@ -83,32 +82,22 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel2);
+            this.splitContainer1.Panel2.Controls.Add(this.preview);
             this.splitContainer1.Size = new System.Drawing.Size(861, 354);
             this.splitContainer1.SplitterDistance = 324;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.TabStop = false;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
-            // panel2
+            // preview
             // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.Generate);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(859, 384);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "轴段图形预览模块(施工中)";
+            this.preview.Controls.Add(this.Generate);
+            this.preview.Cursor = System.Windows.Forms.Cursors.Default;
+            this.preview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.preview.Location = new System.Drawing.Point(0, 0);
+            this.preview.Name = "preview";
+            this.preview.Size = new System.Drawing.Size(859, 384);
+            this.preview.TabIndex = 0;
             // 
             // Generate
             // 
@@ -136,8 +125,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.preview.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -146,10 +134,9 @@
 
         private System.Windows.Forms.Panel ListShower;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.Panel panel2;
+        private Preview preview;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.HScrollBar hScrollBar1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Generate;
     }
 }
