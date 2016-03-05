@@ -32,8 +32,9 @@
             this.ListShower = new System.Windows.Forms.Panel();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.preview = new Preview();
+            this.preview = new LentilToolbox.Preview();
             this.Generate = new System.Windows.Forms.Button();
+            this.previewMSG = new System.Windows.Forms.Label();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -50,7 +51,6 @@
             this.ListShower.Name = "ListShower";
             this.ListShower.Size = new System.Drawing.Size(859, 364);
             this.ListShower.TabIndex = 0;
-            this.ListShower.Paint += new System.Windows.Forms.PaintEventHandler(this.ListShower_Paint);
             // 
             // hScrollBar1
             // 
@@ -92,6 +92,7 @@
             // preview
             // 
             this.preview.Controls.Add(this.Generate);
+            this.preview.Controls.Add(this.previewMSG);
             this.preview.Cursor = System.Windows.Forms.Cursors.Default;
             this.preview.Dock = System.Windows.Forms.DockStyle.Top;
             this.preview.Location = new System.Drawing.Point(0, 0);
@@ -111,6 +112,15 @@
             this.Generate.UseVisualStyleBackColor = true;
             this.Generate.Click += new System.EventHandler(this.Generate_Click);
             // 
+            // previewMSG
+            // 
+            this.previewMSG.AutoSize = true;
+            this.previewMSG.Location = new System.Drawing.Point(4, 5);
+            this.previewMSG.Name = "previewMSG";
+            this.previewMSG.Size = new System.Drawing.Size(101, 12);
+            this.previewMSG.TabIndex = 0;
+            this.previewMSG.Text = "上拉查看轴段预览";
+            // 
             // Shaftwin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -126,6 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.preview.ResumeLayout(false);
+            this.preview.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -138,5 +149,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Button Generate;
+        private System.Windows.Forms.Label previewMSG;
     }
 }

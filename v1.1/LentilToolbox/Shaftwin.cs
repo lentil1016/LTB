@@ -21,6 +21,7 @@ namespace LentilToolbox
     public partial class Shaftwin : Form
     {
         private List<ftrwin> Ftrlist;//轴段特征窗口的list
+
         public Shaftwin()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace LentilToolbox
             Ftrlist[position].Show();//显示新插入的轴段窗口
             int a = Ftrlist.Count, i;
             ListShower.Width = a * 350;//调整容器宽度
-            rewin();//根据总窗口和容器宽度1q24调整滚动条大小
+            rescroll();//根据总窗口和容器宽度调整滚动条大小
             for (i=position;i<a;++i)
             {
                 Ftrlist[i].RefRank(i);
@@ -45,7 +46,7 @@ namespace LentilToolbox
             }//更新各“第n段轴段”中的代号n及显示位置
 
             return true;
-        }
+        }//在position处增加新的特征窗口
 
         public bool DeleteAndRefresh(int position)
         {
@@ -53,33 +54,42 @@ namespace LentilToolbox
             Ftrlist.RemoveAt(position+1);//删除一项轴特征
             int a = Ftrlist.Count, i;
             ListShower.Width = a * 350;//调整容器宽度
-            rewin();//根据总窗口和容器宽度调整滚动条大小
+            rescroll();//根据总窗口和容器宽度调整滚动条大小
             for (i = position; i < a; ++i)
             {
                 Ftrlist[i].RefRank(i);
                 Ftrlist[i].Left = i * 350;
             }//更新各“第n段轴段”中的代号n及显示位置
             return true;
-        }
+        }//删除第position个特征窗口
 
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)//控制上拉分割框至一定位置后隐藏preview message
         {
-
+            if (this.Height - splitContainer1.SplitterDistance > 100)
+                previewMSG.Visible = false;
+            else
+                previewMSG.Visible = true;
         }
 
-        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)//设置拖动条控制特征面板滚动
         {
             ListShower.Left = -hScrollBar1.Value;
         }
 
-        private void rewin()
+        private void Shaftwin_SizeChanged(object sender, System.EventArgs e)//总窗口大小改变时调用
+        {
+            rescroll();
+            regraph();
+        }
+
+        private void rescroll()//根据总窗口大小和特征容器大小重新调整拖动条
         {
             if (Ftrlist.Count * 350 > splitContainer1.Width)
             {
                 hScrollBar1.Visible = true;
                 hScrollBar1.Maximum = ListShower.Width;
                 hScrollBar1.Minimum = 0;
-                hScrollBar1.LargeChange =splitContainer1.Panel1.Width;
+                hScrollBar1.LargeChange = splitContainer1.Panel1.Width;
             }
             else
             {
@@ -87,12 +97,7 @@ namespace LentilToolbox
             }
         }
 
-        private void Shaftwin_SizeChanged(object sender, System.EventArgs e)
-        {
-            rewin();
-        }
-
-        public void regraph()
+        public void regraph()//重新绘制预览
         {
             preview.refresh(Ftrlist);
         }
@@ -117,11 +122,6 @@ namespace LentilToolbox
                     H += H1;
                 }
             }
-        }
-
-        private void ListShower_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

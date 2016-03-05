@@ -68,6 +68,9 @@
     <Compile Include="Shaftwin.Designer.cs">
       <DependentUpon>Shaftwin.cs</DependentUpon>
     </Compile>
+    <Compile Include="TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="ftrwin.resx">
       <DependentUpon>ftrwin.cs</DependentUpon>
     </EmbeddedResource>

@@ -14,14 +14,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 using System;
 using System.Windows.Forms;
 using Core;
-using System.Text.RegularExpressions;
 
 namespace LentilToolbox
 {
-    public partial class ftrwin : Form//轴段特征子窗体
+    public partial class ftrwin :Form //轴段特征子窗体
     {
         private int rank;
-        public Shaftwin Father;
+        public Shaftwin Parentwin;
         private int iB_flat=0;
         private double dBeta;//轴段螺旋角
         private double dB;//轴段宽度
@@ -30,7 +29,7 @@ namespace LentilToolbox
         public ftrwin(Shaftwin oshaftwin)
         {
             InitializeComponent();
-            Father = oshaftwin;
+            Parentwin = oshaftwin;
             ShaftType.Text = "(请选择轴段类型)";
             GearDir.Text = "(请选择旋向)";
             GearType.Text = "(请选择齿轮类型)";
@@ -44,15 +43,13 @@ namespace LentilToolbox
             rank=a;
             this.FtrHead.Text = "定义轴特征"+(rank+1);
         }
-
         private void ADD_Click(object sender, EventArgs e)
         {
-            Father.AddAndRefresh(rank+1);
+            Parentwin.AddAndRefresh(rank+1);
         }
-
         private void Delete_Click(object sender, EventArgs e)
         {
-            Father.DeleteAndRefresh(rank);
+            Parentwin.DeleteAndRefresh(rank);
         }
 
         //---------------------下拉选单设置阶段--------------------------
@@ -144,8 +141,9 @@ namespace LentilToolbox
         {
             refreshbFace();
         }
+
         //参数更新函数
-        public void refreshdBAnddd()//更新轴段基本信息用于绘制预览图
+        public void refreshdBAnddd()//更新轴段基本信息用于绘制预览，每次更新重新绘制预览
         {
             if (ShaftType.Text == "普通轴段")
             {
@@ -167,6 +165,7 @@ namespace LentilToolbox
                 dd = 0;
                 dB = 0;
             }
+            Parentwin.regraph();
             //MessageBox.Show("dB=" + dB);//3月4日检查
             //MessageBox.Show("dd=" + dd);//
         }
@@ -194,6 +193,18 @@ namespace LentilToolbox
             else
                 bFace = false;
         }//更新当前圆锥齿轮锥面朝向
+
+        //-----------------------预览图查询参数-------------------
+        
+        //供Preview类查询用
+        public double consultB()
+        {
+            return dB;
+        }
+        public double consultd()
+        {
+            return dd;
+        }
 
         //--------------------------建模阶段------------------------------
 
@@ -231,83 +242,5 @@ namespace LentilToolbox
             }
             return dB;
         } 
-    }
-
-    //-------------------派生文本框类----------------------
-
-    //修改后不会影响dB和dd的参数
-    public class TextBoxInt: TextBox
-    {
-        public TextBoxInt()
-        {
-        }
-        private int value = 0;
-        public void Check()
-        {
-            if ((Regex.IsMatch(Text, @"^\d+$"))&&(Text !="0"))
-            {
-                value = Convert.ToInt32(Text);
-            }
-            else
-            {
-                MessageBox.Show(Name + "一般是正整数值，请填写一个正整数");
-            }
-        }
-        public int consult()
-        {
-            Check();
-            return value;
-        }
-    }
-    public class TextBoxDouble : TextBox
-    {
-        public TextBoxDouble()
-        {
-        }
-        private double value = 0;
-        public void Check()
-        {
-            if (Regex.IsMatch(Text, @"^\d+(\.\d+)?$"))
-            {
-                value = Convert.ToDouble(Text);
-            }
-            else
-            {
-                MessageBox.Show(Name + "一般是正实数值，请填写一个正实数");
-            }
-        }
-        public double consult()
-        {
-            Check();
-            return value;
-        }
-    }
-    //修改后会影响dB和dd的参数
-    public class TextBoxIntFactor: TextBoxInt
-    {
-        private ftrwin FatherWin;
-        public TextBoxIntFactor(ftrwin oftrwin)
-        {
-            FatherWin = oftrwin;
-            this.Leave += new System.EventHandler(IntTextFactorChanged);
-        }
-        private void IntTextFactorChanged(object sender, EventArgs e)
-        {
-            FatherWin.refreshdBAnddd();
-        }
-    }
-    public class TextBoxDoubleFactor: TextBoxDouble
-    {
-
-        private ftrwin FatherWin;
-        public TextBoxDoubleFactor(ftrwin oftrwin)
-        {
-            FatherWin = oftrwin;
-            this.Leave += new System.EventHandler(DoubleTextFactorChanged);
-        }
-        private void DoubleTextFactorChanged(object sender, EventArgs e)
-        {
-            FatherWin.refreshdBAnddd();
-        }
     }
 }

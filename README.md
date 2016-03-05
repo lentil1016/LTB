@@ -12,4 +12,5 @@ Can sometimes make the CATIA instance crash.<br />
 Can sometimes fail to model at the first time a CATIA instance luanched.
 ###About this project
 I'm a mechanical major undergraduate, An amateur on programing stuff.<br /> 
-I will make some progress soon. :)
+These days are busy, I have my machinery design project to do, Update might be slower than usual.
+thanks for your interests. :)
