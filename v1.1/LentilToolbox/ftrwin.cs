@@ -14,6 +14,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 using System;
 using System.Windows.Forms;
 using Core;
+using System.Text.RegularExpressions;
 
 namespace LentilToolbox
 {
@@ -22,7 +23,7 @@ namespace LentilToolbox
         private int rank;
         public Shaftwin Parentwin;
         private int iB_flat=0;
-        private double dBeta;//轴段螺旋角
+        private double dBeta=0;//轴段螺旋角
         private double dB;//轴段宽度
         private double dd;//轴段直径
         private bool bFace;//轴段锥面朝向
@@ -30,7 +31,10 @@ namespace LentilToolbox
         {
             InitializeComponent();
             Parentwin = oshaftwin;
-            ShaftType.Text = "(请选择轴段类型)";
+        }
+        public void initialize()//初始化参数
+        {
+            ShaftType.Text = "普通轴段";
             GearDir.Text = "(请选择旋向)";
             GearType.Text = "(请选择齿轮类型)";
             GearFace.Text = "(请选择锥面朝向)";
@@ -57,9 +61,9 @@ namespace LentilToolbox
         //可视性控制函数
         private void ShaftType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            refreshdBAnddd();
             if(ShaftType.Text != "(请选择轴段类型)")
             {
+                refreshdBAnddd();
                 if (ShaftType.Text == "普通轴段")
                 {
                     Values_Sha.Visible = true;
@@ -166,18 +170,21 @@ namespace LentilToolbox
                 dB = 0;
             }
             Parentwin.regraph();
-            //MessageBox.Show("dB=" + dB);//3月4日检查
-            //MessageBox.Show("dd=" + dd);//
         }
-        public void refresh_dBeta()
+        public void refresh_dBeta()//更新当前轴段圆柱齿轮螺旋角缓存
         {
             if (GearType.Text == "斜齿轮")
+            {
                 dBeta = 圆柱齿轮螺旋角.consult();
-            else
+                refreshdBAnddd();
+            }
+            else if (GearType.Text == "直齿轮")
+            {
                 dBeta = 0;
-            refreshdBAnddd();
-        }//更新当前轴段圆柱齿轮螺旋角缓存
-        public void refreshiB_flat()
+                refreshdBAnddd();
+            }
+        }
+        public void refreshiB_flat()//更新当前轴段圆柱齿轮旋向
         {
             if (GearDir.Text == "(请选择旋向)")
                 iB_flat = 0;
@@ -185,14 +192,14 @@ namespace LentilToolbox
                 iB_flat = 1;
             else
                 iB_flat = 2;
-        }//更新当前轴段圆柱齿轮旋向
-        public void refreshbFace()
+        }
+        public void refreshbFace()//更新当前圆锥齿轮锥面朝向
         {
             if (GearFace.Text == "向左")
                 bFace = true;
             else
                 bFace = false;
-        }//更新当前圆锥齿轮锥面朝向
+        }
 
         //-----------------------预览图查询参数-------------------
         
@@ -204,6 +211,15 @@ namespace LentilToolbox
         public double consultd()
         {
             return dd;
+        }
+        public int consultdir()
+        {
+            if (GearFace.Text == "向右")
+                return 2;
+            else if (GearFace.Text == "向左")
+                return 1;
+            else
+                return 0;
         }
 
         //--------------------------建模阶段------------------------------
@@ -241,6 +257,6 @@ namespace LentilToolbox
                 return -1;
             }
             return dB;
-        } 
+        }
     }
 }

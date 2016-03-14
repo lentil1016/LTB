@@ -24,15 +24,17 @@ namespace LentilToolbox
 
         public Shaftwin()
         {
-            InitializeComponent();
+            Ftrlist = new List<ftrwin>();//初始化特征窗口容器对象
+            InitializeComponent();//各控件对象初始化
+            preview.initialize(Ftrlist);
+            AddAndRefresh(0);//向特征窗口容器添加第一个特征窗口对象
             hScrollBar1.BringToFront();
-            Ftrlist = new List<ftrwin>();
-            AddAndRefresh(0);
         }
 
         public bool AddAndRefresh(int position)
         {
             Ftrlist.Insert(position,new ftrwin(this));
+            Ftrlist[position].initialize();
             Ftrlist[position].TopLevel = false;
             ListShower.Controls.Add(Ftrlist[position]);
             Ftrlist[position].Show();//显示新插入的轴段窗口
@@ -44,7 +46,6 @@ namespace LentilToolbox
                 Ftrlist[i].RefRank(i);
                 Ftrlist[i].Left = i * 350;
             }//更新各“第n段轴段”中的代号n及显示位置
-
             return true;
         }//在position处增加新的特征窗口
 
@@ -55,6 +56,7 @@ namespace LentilToolbox
             int a = Ftrlist.Count, i;
             ListShower.Width = a * 350;//调整容器宽度
             rescroll();//根据总窗口和容器宽度调整滚动条大小
+            regraph();//重新绘图
             for (i = position; i < a; ++i)
             {
                 Ftrlist[i].RefRank(i);
@@ -65,10 +67,15 @@ namespace LentilToolbox
 
         private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)//控制上拉分割框至一定位置后隐藏preview message
         {
-            if (this.Height - splitContainer1.SplitterDistance > 100)
+            if (Height - splitContainer1.SplitterDistance > 100)
                 previewMSG.Visible = false;
             else
                 previewMSG.Visible = true;
+            if (Height > 300)
+                preview.Height = splitContainer1.Panel2.Height ;
+            else
+                preview.Height = 300;
+            regraph();
         }
 
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)//设置拖动条控制特征面板滚动
@@ -97,9 +104,10 @@ namespace LentilToolbox
             }
         }
 
-        public void regraph()//重新绘制预览
+        public void regraph()//重新绘制预览，窗口改变大小或增减特征窗口时被调用
         {
-            preview.refresh(Ftrlist);
+            if (Ftrlist.Count != 0)
+                preview.refresh();
         }
 
         //----------------生成零件阶段------------------------

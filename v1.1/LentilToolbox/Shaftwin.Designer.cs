@@ -1,4 +1,7 @@
-﻿namespace LentilToolbox
+﻿
+using System.Collections.Generic;
+
+namespace LentilToolbox
 {
     partial class Shaftwin
     {
@@ -35,7 +38,6 @@
             this.preview = new LentilToolbox.Preview();
             this.Generate = new System.Windows.Forms.Button();
             this.previewMSG = new System.Windows.Forms.Label();
-            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -97,7 +99,7 @@
             this.preview.Dock = System.Windows.Forms.DockStyle.Top;
             this.preview.Location = new System.Drawing.Point(0, 0);
             this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(859, 384);
+            this.preview.Size = new System.Drawing.Size(859, 300);
             this.preview.TabIndex = 0;
             // 
             // Generate
@@ -144,7 +146,6 @@
         #endregion
 
         private System.Windows.Forms.Panel ListShower;
-        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private Preview preview;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.HScrollBar hScrollBar1;

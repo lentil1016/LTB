@@ -8,26 +8,27 @@ namespace LentilToolbox
     //修改后不会影响dB和dd的参数
     public class TextBoxInt: TextBox
     {
+
         public TextBoxInt()
-    {
-    }
-    private int value = 0;
-    public void Check()
-    {
-        if ((Regex.IsMatch(Text, @"^\d+$")) && (Text != "0"))
         {
-            value = Convert.ToInt32(Text);
         }
-        else
+        private int value = 0;
+        public void Check()
         {
-            MessageBox.Show(Name + "一般是正整数值，请填写一个正整数");
+            if ((Regex.IsMatch(Text, @"^\d+$")) && (Text != "0"))
+            {
+                value = Convert.ToInt32(Text);
+            }
+            else
+            {
+                MessageBox.Show(Name + "一般是正整数值，请填写一个正整数");
+            }
         }
-    }
-    public int consult()
-    {
-        Check();
-        return value;
-    }
+        public int consult()
+        {
+            Check();
+            return value;
+        }
 }
     public class TextBoxDouble : TextBox
     {
