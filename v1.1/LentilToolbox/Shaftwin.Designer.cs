@@ -35,14 +35,14 @@ namespace LentilToolbox
             this.ListShower = new System.Windows.Forms.Panel();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.preview = new LentilToolbox.Preview();
-            this.Generate = new System.Windows.Forms.Button();
+            this.刷新预览 = new System.Windows.Forms.Button();
             this.previewMSG = new System.Windows.Forms.Label();
+            this.Generate = new System.Windows.Forms.Button();
+            this.preview = new LentilToolbox.Preview();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.preview.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListShower
@@ -86,6 +86,7 @@ namespace LentilToolbox
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.刷新预览);
             this.splitContainer1.Panel2.Controls.Add(this.preview);
             this.splitContainer1.Panel2.Controls.Add(this.previewMSG);
             this.splitContainer1.Panel2.Controls.Add(this.Generate);
@@ -96,14 +97,25 @@ namespace LentilToolbox
             this.splitContainer1.TabStop = false;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
-            // preview
+            // 刷新预览
             // 
-            this.preview.Cursor = System.Windows.Forms.Cursors.Default;
-            this.preview.Location = new System.Drawing.Point(0, 40);
-            this.preview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(1002, 425);
-            this.preview.TabIndex = 0;
+            this.刷新预览.Location = new System.Drawing.Point(0, 1);
+            this.刷新预览.Name = "刷新预览";
+            this.刷新预览.Size = new System.Drawing.Size(87, 34);
+            this.刷新预览.TabIndex = 0;
+            this.刷新预览.Text = "刷新预览";
+            this.刷新预览.UseVisualStyleBackColor = true;
+            this.刷新预览.Visible = false;
+            this.刷新预览.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // previewMSG
+            // 
+            this.previewMSG.AutoSize = true;
+            this.previewMSG.Location = new System.Drawing.Point(5, 7);
+            this.previewMSG.Name = "previewMSG";
+            this.previewMSG.Size = new System.Drawing.Size(104, 17);
+            this.previewMSG.TabIndex = 0;
+            this.previewMSG.Text = "上拉查看轴段预览";
             // 
             // Generate
             // 
@@ -118,14 +130,14 @@ namespace LentilToolbox
             this.Generate.UseVisualStyleBackColor = true;
             this.Generate.Click += new System.EventHandler(this.Generate_Click);
             // 
-            // previewMSG
+            // preview
             // 
-            this.previewMSG.AutoSize = true;
-            this.previewMSG.Location = new System.Drawing.Point(5, 7);
-            this.previewMSG.Name = "previewMSG";
-            this.previewMSG.Size = new System.Drawing.Size(104, 17);
-            this.previewMSG.TabIndex = 0;
-            this.previewMSG.Text = "上拉查看轴段预览";
+            this.preview.Cursor = System.Windows.Forms.Cursors.Default;
+            this.preview.Location = new System.Drawing.Point(0, 40);
+            this.preview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.preview.Name = "preview";
+            this.preview.Size = new System.Drawing.Size(1002, 425);
+            this.preview.TabIndex = 0;
             // 
             // Shaftwin
             // 
@@ -141,10 +153,9 @@ namespace LentilToolbox
             this.SizeChanged += new System.EventHandler(this.Shaftwin_SizeChanged);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.preview.ResumeLayout(false);
-            this.preview.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -157,5 +168,6 @@ namespace LentilToolbox
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Button Generate;
         private System.Windows.Forms.Label previewMSG;
+        private System.Windows.Forms.Button 刷新预览;
     }
 }

@@ -29,7 +29,7 @@ namespace LentilToolbox
             preview.initialize(Ftrlist);
             AddAndRefresh(0);//向特征窗口容器添加第一个特征窗口对象
             hScrollBar1.BringToFront();
-            height_temp = splitContainer1.Panel2.Height;
+            preview.Width = this.Width;
         }
 
         public bool AddAndRefresh(int position)
@@ -69,9 +69,17 @@ namespace LentilToolbox
         private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)//控制上拉分割框至一定位置后隐藏preview message
         {
             if (Height - splitContainer1.SplitterDistance > 100)
+            {
                 previewMSG.Visible = false;
+                刷新预览.Visible = true;
+                preview.Visible = true;
+            }
             else
+            {
                 previewMSG.Visible = true;
+                刷新预览.Visible = false;
+                preview.Visible = false;
+            }
             if (Height > 300)
                 preview.Height = splitContainer1.Panel2.Height ;
             else
@@ -84,14 +92,11 @@ namespace LentilToolbox
             ListShower.Left = -hScrollBar1.Value;
         }
 
-        private int height_temp;
-
         private void Shaftwin_SizeChanged(object sender, System.EventArgs e)//总窗口大小改变时调用
         {
             rescroll();
-            splitContainer1.Height = this.Height- height_temp;
+            preview.Width = this.Width;
             regraph();
-            height_temp = splitContainer1.Panel2.Height;
         }
 
         private void rescroll()//根据总窗口大小和特征容器大小重新调整拖动条
@@ -115,10 +120,14 @@ namespace LentilToolbox
                 preview.refresh();
         }
 
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            regraph();
+        }
         //----------------生成零件阶段------------------------
         private void Generate_Click(object sender, System.EventArgs e)
         {
-            this.Generate.IsAccessible = false;
+            this.Generate.Enabled = false;
             int a = Ftrlist.Count, i=0;
             iPartDoc oiPartDoc=new iPartDoc();//生成零件实例
             double H = 0.0, H1 = 0.0;
@@ -135,6 +144,8 @@ namespace LentilToolbox
                     H += H1;
                 }
             }
+            this.Generate.Enabled = true;
         }
+
     }
 }
