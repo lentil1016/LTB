@@ -55,13 +55,13 @@ namespace LentilToolbox
             Ftrlist[position+1].Visible = false;
             Ftrlist.RemoveAt(position+1);//删除一项轴特征
             int a = Ftrlist.Count, i;
-            ListShower.Width = a * 350;//调整容器宽度
+            ListShower.Width = a * Ftrlist[0].Width;//调整容器宽度
             rescroll();//根据总窗口和容器宽度调整滚动条大小
             regraph();//重新绘图
             for (i = position; i < a; ++i)
             {
                 Ftrlist[i].RefRank(i);
-                Ftrlist[i].Left = i * 350;
+                Ftrlist[i].Left = i * Ftrlist[0].Width;
             }//更新各“第n段轴段”中的代号n及显示位置
             return true;
         }//删除第position个特征窗口
