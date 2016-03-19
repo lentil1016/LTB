@@ -108,7 +108,7 @@
             "(请选择锥面朝向)",
             "向左",
             "向右"});
-            this.GearFace.Location = new System.Drawing.Point(168, 54);
+            this.GearFace.Location = new System.Drawing.Point(168, 22);
             this.GearFace.Name = "GearFace";
             this.GearFace.Size = new System.Drawing.Size(127, 25);
             this.GearFace.TabIndex = 4;
@@ -394,7 +394,7 @@
             this.Values_Cyl.Controls.Add(this.label18);
             this.Values_Cyl.Location = new System.Drawing.Point(12, 89);
             this.Values_Cyl.Name = "Values_Cyl";
-            this.Values_Cyl.Size = new System.Drawing.Size(306, 150);
+            this.Values_Cyl.Size = new System.Drawing.Size(306, 200);
             this.Values_Cyl.TabIndex = 12;
             this.Values_Cyl.TabStop = false;
             this.Values_Cyl.Text = "设计参数";
@@ -535,6 +535,8 @@
         }
 
         #endregion
+
+
         private System.Windows.Forms.Button ADD;
         private System.Windows.Forms.GroupBox FtrHead;
         private System.Windows.Forms.ComboBox ShaftType;

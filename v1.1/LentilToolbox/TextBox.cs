@@ -65,6 +65,7 @@ namespace LentilToolbox
         private void IntTextFactorChanged(object sender, EventArgs e)
         {
             ParentWin.refreshdBAnddd();
+            MessageBox.Show("Faxtor Changed");
         }
     }
     public class TextBoxDoubleFactor : TextBoxDouble
@@ -79,6 +80,7 @@ namespace LentilToolbox
         private void DoubleTextFactorChanged(object sender, EventArgs e)
         {
             ParentWin.refreshdBAnddd();
+            MessageBox.Show("Faxtor Changed");
         }
     }
 }

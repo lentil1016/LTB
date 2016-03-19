@@ -37,7 +37,10 @@ namespace LentilToolbox
             RecurListor(0, Reclist);//递归计算上述成员变量后创建List<rectangle>，最后将List转换成array
             Rectangle[] RecArray = Reclist.ToArray();//将list转化为array
             g.Clear(BackColor);
+            MessageBox.Show("Refresh Begin");
             g.FillRectangles(Bluebrush,RecArray);
+            g.Dispose();
+            MessageBox.Show("Refresh Done"+ftrList.Count);
         }
         public void RecurListor(int Depth,List<Rectangle> RecList)//递归累加，depth为当前层数，Reclist为各个轴段矩形寄存list
         {
@@ -45,7 +48,7 @@ namespace LentilToolbox
             {
                 double temp_width = max_width;//当前深度左端距离
                 double temp_diameter = ftrList[Depth].consultd();//当前深度轴径
-                max_width += ftrList[Depth].consultB();
+                max_width += ftrList[Depth].consultB();//当前深度轴宽
                 if (max_diameter < temp_diameter)
                     max_diameter = temp_diameter;
                 RecurListor(Depth+1, RecList);
@@ -55,7 +58,7 @@ namespace LentilToolbox
             }
             else
             {
-                paint_diameter = (Height - 50) / max_diameter;
+                paint_diameter = (Height - 80) / max_diameter;
                 paint_width = (Width - 50) / max_width;
                 //MessageBox.Show("height="+Height+" width="+Width);
             }

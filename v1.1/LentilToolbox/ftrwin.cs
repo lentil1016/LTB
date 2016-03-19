@@ -71,7 +71,6 @@ namespace LentilToolbox
                     Values_Bev.Visible = false;
                     GearType.Visible = false;
                     GearFace.Visible = false;
-                    GearFace.Top = 54;
                     GearDir.Visible = false;
                     GearType.Text = "(请选择齿轮类型)";
                 }
@@ -83,7 +82,6 @@ namespace LentilToolbox
                         Values_Bev.Visible = false;
                         GearType.Visible = true;
                         GearFace.Visible = false;
-                        GearFace.Top = 54;
                     }
                     else
                     {
@@ -93,7 +91,6 @@ namespace LentilToolbox
                         GearType.Text = "(请选择齿轮类型)";
                         GearFace.Visible = true;
                         GearType.Visible = false;
-                        GearFace.Top = 22;
                         GearDir.Visible = false;
                     }
                 }
@@ -119,13 +116,13 @@ namespace LentilToolbox
                     GearDir.Visible = true;
                     圆柱齿轮螺旋角.Visible = true;
                     L_Beta .Visible = true;
-                    Values_Cyl .Height = 150;
+                    Values_Cyl .Height = 200;
                 }
                 else
                 {
                     圆柱齿轮螺旋角.Visible = false;
                     L_Beta.Visible = false;
-                    Values_Cyl.Height = 125;
+                    Values_Cyl.Height = 170;
                     GearDir.Visible = false ;
                 }
                 Values_Cyl.Visible = true;

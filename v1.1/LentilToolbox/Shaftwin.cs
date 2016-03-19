@@ -29,6 +29,7 @@ namespace LentilToolbox
             preview.initialize(Ftrlist);
             AddAndRefresh(0);//向特征窗口容器添加第一个特征窗口对象
             hScrollBar1.BringToFront();
+            height_temp = splitContainer1.Panel2.Height;
         }
 
         public bool AddAndRefresh(int position)
@@ -39,12 +40,12 @@ namespace LentilToolbox
             ListShower.Controls.Add(Ftrlist[position]);
             Ftrlist[position].Show();//显示新插入的轴段窗口
             int a = Ftrlist.Count, i;
-            ListShower.Width = a * 350;//调整容器宽度
+            ListShower.Width = a * Ftrlist[0].Width;//调整容器宽度
             rescroll();//根据总窗口和容器宽度调整滚动条大小
             for (i=position;i<a;++i)
             {
                 Ftrlist[i].RefRank(i);
-                Ftrlist[i].Left = i * 350;
+                Ftrlist[i].Left = i * Ftrlist[0].Width;
             }//更新各“第n段轴段”中的代号n及显示位置
             return true;
         }//在position处增加新的特征窗口
@@ -83,10 +84,14 @@ namespace LentilToolbox
             ListShower.Left = -hScrollBar1.Value;
         }
 
+        private int height_temp;
+
         private void Shaftwin_SizeChanged(object sender, System.EventArgs e)//总窗口大小改变时调用
         {
             rescroll();
+            splitContainer1.Height = this.Height- height_temp;
             regraph();
+            height_temp = splitContainer1.Panel2.Height;
         }
 
         private void rescroll()//根据总窗口大小和特征容器大小重新调整拖动条
