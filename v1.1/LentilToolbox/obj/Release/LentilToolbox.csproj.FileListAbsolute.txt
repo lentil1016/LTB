@@ -28,3 +28,6 @@ G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\Lent
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.Shaftwin.resources
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.csproj.GenerateResource.Cache
 G:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.ftrwin.resources
+F:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\bin\Release\LentilToolbox.exe.config
+F:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.exe
+F:\Documents\Visual Studio 2015\Projects\LTB\v1.1\LentilToolbox\obj\Release\LentilToolbox.pdb

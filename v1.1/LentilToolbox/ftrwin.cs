@@ -14,7 +14,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 using System;
 using System.Windows.Forms;
 using Core;
-using System.Text.RegularExpressions;
 
 namespace LentilToolbox
 {

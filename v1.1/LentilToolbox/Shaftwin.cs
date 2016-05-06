@@ -35,7 +35,6 @@ namespace LentilToolbox
         public bool AddAndRefresh(int position)
         {
             Ftrlist.Insert(position,new ftrwin(this));
-            Ftrlist[position].initialize();
             Ftrlist[position].TopLevel = false;
             ListShower.Controls.Add(Ftrlist[position]);
             Ftrlist[position].Show();//显示新插入的轴段窗口
@@ -47,6 +46,8 @@ namespace LentilToolbox
                 Ftrlist[i].RefRank(i);
                 Ftrlist[i].Left = i * Ftrlist[0].Width;
             }//更新各“第n段轴段”中的代号n及显示位置
+            Ftrlist[position].initialize();
+            regraph();
             return true;
         }//在position处增加新的特征窗口
 

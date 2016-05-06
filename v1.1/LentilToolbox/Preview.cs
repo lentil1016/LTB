@@ -29,18 +29,16 @@ namespace LentilToolbox
 
         public void refresh()//更新上述成员变量，重新绘图函数
         {
+            g.Dispose();
             g = CreateGraphics();
             Listcount = ftrList.Count;
             max_diameter = 0;
             max_width = 0;
             List<Rectangle>  Reclist = new List<Rectangle>();
-            RecurListor(0, Reclist);//递归计算上述成员变量后创建List<rectangle>，最后将List转换成array
+            RecurListor(0, Reclist);//递归计算上述成员变量后创建矩形List
             Rectangle[] RecArray = Reclist.ToArray();//将list转化为array
             g.Clear(BackColor);
-            //MessageBox.Show("Refresh Begin");
             g.FillRectangles(Bluebrush,RecArray);
-            g.Dispose();
-            //MessageBox.Show("Refresh Done"+ftrList.Count);
         }
         public void RecurListor(int Depth,List<Rectangle> RecList)//递归累加，depth为当前层数，Reclist为各个轴段矩形寄存list
         {
